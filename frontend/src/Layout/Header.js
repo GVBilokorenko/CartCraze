@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = ({ onToggleAside, showAside }) => {
   return (
     <header className="navbar bg-base-100">
@@ -7,13 +9,13 @@ const Header = ({ onToggleAside, showAside }) => {
         </button>
       )}
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">CartCraze</a>
+        <Link to="/" className="btn btn-ghost normal-case text-xl">CartCraze</Link>
       </div>
       <div className="flex-none">
         <ul className="menu menu-horizontal p-0">
-          <li><a>Home</a></li>
-          <li><a>Blogs</a></li>
-          <li><a>Contact</a></li>
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/">Blogs</Link></li>
+          <li><Link to="/">Contact</Link></li>
         </ul>
       </div>
     </header>
