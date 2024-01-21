@@ -1,10 +1,9 @@
-"use strict";
 import express from 'express';
 import cors from 'cors'
 import mongoose from 'mongoose';
-import userRoutes from './routes/users.js';
 import dotenv from 'dotenv'
 dotenv.config()
+
 
 const PORT = 5000;
 const mongo_user = process.env.mongo_user;
@@ -18,6 +17,7 @@ app.use(express.json());
 
 mongoose.connect(mongoURI);
 
+import userRoutes from './routes/users.js';
 app.use('/api/users', userRoutes);
 
 app.listen(PORT, () => {
