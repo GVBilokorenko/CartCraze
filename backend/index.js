@@ -19,6 +19,10 @@ mongoose.connect(mongoURI);
 
 import userRoutes from './routes/users.js';
 app.use('/api/users', userRoutes);
+import categoryRoutes from './routes/category.js';
+app.use('/api/category', categoryRoutes);
+import productRoutes from './routes/product.js';
+app.use('/api/product', productRoutes);
 
 app.listen(PORT, () => {
   console.log(`Web server listening on http://localhost:${PORT}`);
