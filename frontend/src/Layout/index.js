@@ -19,7 +19,7 @@ const Layout = ({ disableHeader, disableAside }) => {
       {!disableAside && (
         <Aside isOpen={isAsideOpen} onClose={() => setAsideOpen(false)} />
       )}
-      <main className='bg-gray-100'>
+      <main className='bg-gray-100 p-4'>
         <Outlet />
       </main>
     </>

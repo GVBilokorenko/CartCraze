@@ -17,7 +17,7 @@ const Header = ({ onToggleAside, showAside }) => {
       <div className="flex-none">
         <ul className="menu menu-horizontal p-0">
           <li><Link className="btn btn-ghost normal-case text-xl" to="/home">Home</Link></li>
-          <li><Link className="btn btn-ghost normal-case text-xl" to="/">Blogs</Link></li>
+          <li><Link className="btn btn-ghost normal-case text-xl" to="/category">Catalog</Link></li>
           {!user && <li><Link className="btn btn-ghost normal-case text-xl" to="/auth">Auth</Link></li>}
           {user && <li><button className="btn btn-ghost normal-case text-xl" onClick={() => logout()}>{user.username}</button></li>}
         </ul>
