@@ -1,6 +1,9 @@
 import React from 'react';
+import { useGlobal } from 'context/globalContext.js';
 
 const ProductCard = ({ product }) => {
+  const {addCartItem} = useGlobal();
+  
   return (
     <div className="card card-compact bg-base-100 shadow-xl">
       <figure>
@@ -9,10 +12,10 @@ const ProductCard = ({ product }) => {
       <div className="card-body">
         <h2 className="card-title">{product.name}</h2>
         <p>{product.description}</p>
-        <div className="card-actions justify-end">
+        <div className="card-actions justify-end items-center">
           <div className="badge badge-outline">{product.category.name}</div>
           <div className="badge badge-outline">${product.price}</div>
-          <button className="btn btn-primary">
+          <button className="btn btn-primary" onClick={() => addCartItem(product)}>
             Add to Cart
           </button>
         </div>

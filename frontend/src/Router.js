@@ -5,6 +5,7 @@ import { AuthProvider } from 'context/authContext.js';
 import { AnonymousRoute } from 'components/protectedRoute'
 import Layout from 'Layout';
 import Category from 'components/category';
+import CartPage from "components/Cart"
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
           <Route path="/" element={<Layout disableHeader={false} disableAside={false} />}>
             <Route index element={<div>Home</div>} />
             <Route path="home" element={<div>Home</div>} />
+            <Route path="cart" element={<CartPage />} />
             <Route path="category" element={<Category />} />
             <Route path="category/:categoryName" element={<Category />} />
             <Route path="blogs" element={<div>Blogs</div>} />

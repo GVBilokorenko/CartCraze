@@ -7,7 +7,7 @@ const Aside = ({ isOpen, onClose }) => {
 
   useEffect(() => {
     axios.get('/api/category/')
-      .then(res => { setCatalog(res.data); console.log(res.data) })
+      .then(res => { setCatalog(res.data) })
   }, [])
 
   return (
