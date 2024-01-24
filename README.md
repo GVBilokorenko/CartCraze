@@ -30,13 +30,9 @@ To set up CartCraze locally, follow these steps:
 
     Clone the repository:
 
-    bash
-
 git clone [repository URL]
 
 Install dependencies for both frontend and backend:
-
-bash
 
 # Frontend dependencies
 cd frontend
@@ -49,8 +45,6 @@ npm install
 Set up your environment variables in a .env file in the backend directory.
 
 Start the server and client:
-
-bash
 
     # Start the backend server
     cd backend
